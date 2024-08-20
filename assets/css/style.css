@@ -46,7 +46,7 @@ nav a:hover {
 
 /* Main Content */
 main {
-    margin-top: 160px; /* Increased to ensure the main content starts below the header */
+    margin-top: 130px; /* Increased to ensure the main content starts below the header */
     padding: 20px;
     background-color: #111; /* Slightly different shade to distinguish content area */
 }
@@ -82,7 +82,7 @@ img {
     }
 
     main {
-        margin-top: 100px; /* Adjusted space for header on small screens */
+        margin-top: 150px; /* Increased space for header on small screens */
     }
 }
 
