@@ -19,10 +19,7 @@ function login(secret) {
         if (request.status >= 200 && request.status < 400) {
             // Hide the login container
             document.getElementById('login-container').style.display = 'none';
-
-            // When the video ends, redirect to the URL with the nva parameter
-            video.onended = function () {
-                window.location.href = url + "?nva=" + nva;  // Redirect with the nva parameter
+            window.location.href = url + "?nva=" + nva;  // Redirect with the nva parameter
             };
         } else {
             alert.style.display = 'block';
