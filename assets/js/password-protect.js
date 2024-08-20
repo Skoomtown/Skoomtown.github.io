@@ -6,25 +6,42 @@ document.getElementById('login-button').addEventListener('click', function () {
 function login(secret) {
     var hash = sha1(secret);  // Hash the password using SHA-1
     var url = hash + '/index.html';  // Construct the URL based on the hash
-    var alert = document.querySelectorAll('[data-id="alert"]');
+    var alert = document.querySelector('[data-id="alert"]');
 
+    // Set the time limit for the link (e.g., 5 minutes from now)
+    var nva = new Date().getTime() + 5 * 60 * 1000;  // 5 minutes in milliseconds
+
+    // Password verification simulation
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
 
     request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
-            let nva = new Date().getTime() + 300_000;  // Set link to be valid for 1 second
-            window.location = url + "?nva=" + nva;
+            // Hide the login container
+            document.getElementById('login-container').style.display = 'none';
+
+            // Show the video container and play the video
+            var videoContainer = document.getElementById('video-container');
+            var video = document.getElementById('intro-video');
+            videoContainer.style.display = 'block';
+            video.play();
+
+            // When the video ends, redirect to the URL with the nva parameter
+            video.onended = function () {
+                window.location.href = url + "?nva=" + nva;  // Redirect with the nva parameter
+            };
         } else {
-            alert[0].style.display = 'block';
+            alert.style.display = 'block';
             document.getElementById('password').setAttribute('placeholder', 'Incorrect password');
             document.getElementById('password').value = '';
         }
     };
+
     request.onerror = function () {
-        alert[0].style.display = 'block';
+        alert.style.display = 'block';
         document.getElementById('password').setAttribute('placeholder', 'Incorrect password');
         document.getElementById('password').value = '';
     };
+
     request.send();
 }

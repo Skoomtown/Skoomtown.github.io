@@ -1,10 +1,12 @@
-/* General Styles */
-body {
-    font-family: 'Orbitron', sans-serif;
+/* General Body Style */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #000;
-    color: #fff;
+    width: 100%;
+    height: 100%;
+    background: #000; /* Fallback background color */
+    color: #fff; /* Ensure text is white */
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Header */
@@ -43,60 +45,9 @@ nav a:hover {
 
 /* Main Content */
 main {
-    margin-top: 120px; /* Increase this value to ensure no overlap */
+    margin-top: 130px; /* Increased to ensure the main content starts below the header */
     padding: 20px;
-}
-
-/* Responsive Image */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Media Queries for Smaller Screens */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.8em; /* Smaller header font size */
-    }
-
-    nav a {
-        font-size: 1em; /* Smaller nav link size */
-    }
-
-    main {
-        margin-top: 100px; /* More space for the header */
-    }
-}
-
-/* Button Styling */
-.btn {
-    background-color: #00ffcc;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    font-family: 'Orbitron', sans-serif;
-}
-
-.btn:hover {
-    background-color: #00aaff;
-    color: white;
-}
-
-.btn-1 {
-    box-shadow: 0 5px 15px rgba(0, 255, 204, 0.5);
-}
-
-.btn-1c {
-    font-weight: bold;
+    background-color: #111; /* Slightly different shade to distinguish content area */
 }
 
 /* Footer */
@@ -111,3 +62,25 @@ footer {
     left: 0;
 }
 
+/* Responsive Image */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em; /* Smaller header font size for small screens */
+    }
+
+    nav a {
+        font-size: 1em; /* Smaller navigation link size for small screens */
+    }
+
+    main {
+        margin-top: 100px; /* Adjusted space for header on small screens */
+    }
+}
