@@ -46,7 +46,7 @@ nav a:hover {
 
 /* Main Content */
 main {
-    margin-top: 130px; /* Increased to ensure the main content starts below the header */
+    margin-top: 160px; /* Increased to ensure the main content starts below the header */
     padding: 20px;
     background-color: #111; /* Slightly different shade to distinguish content area */
 }
