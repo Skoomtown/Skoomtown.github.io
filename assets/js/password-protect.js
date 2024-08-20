@@ -17,10 +17,9 @@ function login(secret) {
 
     request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
-            // Hide the login container
-            document.getElementById('login-container').style.display = 'none';
-            window.location.href = url + "?nva=" + nva;  // Redirect with the nva parameter
-            };
+            // Redirect immediately to the URL with the nva parameter
+            window.location.href = url + "?nva=" + nva;
+
         } else {
             alert.style.display = 'block';
             document.getElementById('password').setAttribute('placeholder', 'Incorrect password');
