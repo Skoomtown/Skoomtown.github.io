@@ -20,12 +20,6 @@ function login(secret) {
             // Hide the login container
             document.getElementById('login-container').style.display = 'none';
 
-            // Show the video container and play the video
-            var videoContainer = document.getElementById('video-container');
-            var video = document.getElementById('intro-video');
-            videoContainer.style.display = 'block';
-            video.play();
-
             // When the video ends, redirect to the URL with the nva parameter
             video.onended = function () {
                 window.location.href = url + "?nva=" + nva;  // Redirect with the nva parameter

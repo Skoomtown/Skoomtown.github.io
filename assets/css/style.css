@@ -39,8 +39,9 @@ nav a {
     font-size: 1.2em;
 }
 
+/* Link Hover Effect */
 nav a:hover {
-    color: #00ffcc;
+    color: #6a0dad; /* Purple color on hover */
 }
 
 /* Main Content */
@@ -83,4 +84,32 @@ img {
     main {
         margin-top: 100px; /* Adjusted space for header on small screens */
     }
+}
+
+/* Button Styling */
+button {
+    background-color: #00ffcc; /* Initial button color */
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: 'Orbitron', sans-serif;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #6a0dad; /* Purple color on hover */
+    color: white; /* Change text color to white on hover */
+}
+
+/* Button Box Shadow for Hover */
+button:active {
+    box-shadow: 0 5px 15px rgba(106, 13, 173, 0.5); /* Add a subtle shadow when the button is clicked */
 }
