@@ -49,6 +49,9 @@ main {
     margin-top: 130px; /* Increased to ensure the main content starts below the header */
     padding: 20px;
     background-color: #111; /* Slightly different shade to distinguish content area */
+    font-family: 'Roboto', sans-serif; /* Apply more readable font to main content */
+    line-height: 1.6; /* Improved line height for readability */
+    color: #e0e0e0; /* Lighter text color for better contrast */
 }
 
 /* Footer */
