@@ -33,10 +33,16 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: #fff; /* Default link color (white) */
     margin: 0 15px;
     text-decoration: none;
     font-size: 1.2em;
+}
+
+/* Highlighting active link */
+.nav-link.active {
+    color: #ff4500; /* Highlighted link color */
+    font-weight: bold; /* Optional: make it bold */
 }
 
 /* Link Hover Effect */
@@ -44,10 +50,12 @@ nav a:hover {
     color: #6a0dad; /* Purple color on hover */
 }
 
+
 /* Main Content */
 main {
     margin-top: 130px; /* Increased to ensure the main content starts below the header */
     padding: 20px;
+    padding-bottom: 20px;
     background-color: #111; /* Slightly different shade to distinguish content area */
     font-family: 'Roboto', sans-serif; /* Apply more readable font to main content */
     line-height: 1.6; /* Improved line height for readability */
@@ -56,14 +64,16 @@ main {
 
 /* Footer */
 footer {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    width: 100%;
+    position: relative; //changed to relative from fixed also works if position is not there
+    font-size: small;
     bottom: 0;
     left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* Responsive Image */
