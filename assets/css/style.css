@@ -41,13 +41,13 @@ nav a {
 
 /* Highlighting active link */
 .nav-link.active {
-    color: #ff4500; /* Highlighted link color */
+    color: #bf66ff; /* Highlighted link color */
     font-weight: bold; /* Optional: make it bold */
 }
 
 /* Link Hover Effect */
 nav a:hover {
-    color: #6a0dad; /* Purple color on hover */
+    color: #bf66ff; /* Purple color on hover */
 }
 
 
@@ -118,7 +118,7 @@ button {
 
 /* Button Hover Effect */
 button:hover {
-    background-color: #6a0dad; /* Purple color on hover */
+    background-color: #bf66ff; /* Purple color on hover */
     color: white; /* Change text color to white on hover */
 }
 
