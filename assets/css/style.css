@@ -9,6 +9,20 @@ body, html {
     font-family: 'Orbitron', sans-serif;
 }
 
+/* Wrapper to Center Content and Limit Width */
+.container {
+    max-width: 700px; /* Set maximum width for the content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
+/* Wrapper to Center Content and Limit Width */
+.index_container {
+    max-width: 1000px; /* Set maximum width for the content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add some padding on the sides */
+}
+
 /* Header */
 header {
     background-color: rgba(0, 0, 0, 0.8);
@@ -50,7 +64,6 @@ nav a:hover {
     color: #bf66ff; /* Purple color on hover */
 }
 
-
 /* Main Content */
 main {
     margin-top: 130px; /* Increased to ensure the main content starts below the header */
@@ -68,7 +81,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    position: relative; //changed to relative from fixed also works if position is not there
+    position: relative; /* Changed to relative from fixed */
     font-size: small;
     bottom: 0;
     left: 0;
